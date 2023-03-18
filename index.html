@@ -1,249 +1,229 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.108.0">
-    <title>Carousel Template · Bootstrap v5.3</title>
+<!DOCTYPE html>
+<html>
+<head>
+<title>W3.CSS Template</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inconsolata">
+<style>
+body, html {
+  height: 100%;
+  font-family: "Inconsolata", sans-serif;
+}
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+.bgimg {
+  background-position: center;
+  background-size: cover;
+  background-image: url("/w3images/coffeehouse.jpg");
+  min-height: 75%;
+}
 
-    
+.menu {
+  display: none;
+}
+</style>
+</head>
+<body>
 
-    
-
-<link href="../assets/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
-
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
-
-      .b-example-divider {
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
-
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-    </style>
-
-    
-    <!-- Custom styles for this template -->
-    <link href="carousel.css" rel="stylesheet">
-  </head>
-  <body>
-    
-<header>
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="#">Carousel</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <ul class="navbar-nav me-auto mb-2 mb-md-0">
-          <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled">Disabled</a>
-          </li>
-        </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
-      </div>
+<!-- Links (sit on top) -->
+<div class="w3-top">
+  <div class="w3-row w3-padding w3-black">
+    <div class="w3-col s3">
+      <a href="#" class="w3-button w3-block w3-black">HOME</a>
     </div>
-  </nav>
+    <div class="w3-col s3">
+      <a href="#about" class="w3-button w3-block w3-black">ABOUT</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#menu" class="w3-button w3-block w3-black">MENU</a>
+    </div>
+    <div class="w3-col s3">
+      <a href="#where" class="w3-button w3-block w3-black">WHERE</a>
+    </div>
+  </div>
+</div>
+
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-center w3-padding-large w3-hide-small">
+    <span class="w3-tag">Open from 6am to 5pm</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white" style="font-size:90px">the<br>Cafe</span>
+  </div>
+  <div class="w3-display-bottomright w3-center w3-padding-large">
+    <span class="w3-text-white">15 Adr street, 5015</span>
+  </div>
 </header>
 
-<main>
+<!-- Add a background color and large text to the whole page -->
+<div class="w3-sand w3-grayscale w3-large">
 
-  <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-    <div class="carousel-indicators">
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-      <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
-    </div>
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-        <div class="container">
-          <div class="carousel-caption text-start">
-            <h1>Example headline.</h1>
-            <p>Some representative placeholder content for the first slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Sign up today</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-        <div class="container">
-          <div class="carousel-caption">
-            <h1>Another example headline.</h1>
-            <p>Some representative placeholder content for the second slide of the carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
-          </div>
-        </div>
-      </div>
-      <div class="carousel-item">
-        <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
-        <div class="container">
-          <div class="carousel-caption text-end">
-            <h1>One more for good measure.</h1>
-            <p>Some representative placeholder content for the third slide of this carousel.</p>
-            <p><a class="btn btn-lg btn-primary" href="#">Browse gallery</a></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
+<!-- About Container -->
+<div class="w3-container" id="about">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Tietoa tähtitieteestä</span></h5>
+    <p>Tähtitieteellisen tutkimuksen piiriin kuuluu aivan kaikki ilmakehän ulkopuolella oleva -- Kuu, oma aurinkokuntamme, sen lähitähdet, oma galaksimme Linnunrata, sen naapurigalaksit ja koko universumin galaksipaljous. 
+Aina 1600-luvulle saakka kaikki tähtitieteelliset havainnot piti tehdä paljain silmin. Kaukoputken keksimisen myötä saatettiin nähdä kauempana olevia ja himmeämpiä kohteita, ja maailmankuvamme mullistui. Maa ei ollutkaan maailmankaikkeuden keskipiste, vaan planeettamme kiersikin Aurinkoa, joka sekin oli vain yksi monista tähdistä Linnunradan tähtimuodostelmassa. 
+Valokuvauksen keksiminen 1800-luvun alkupuolella mullisti tähtitieteen uudelleen. Entistä himmeämpiä kohteita saatiin havaittua, kun niistä voitiin tehdä pitkiä valotuksia. Lisäksi taivaan kohteet saatiin nyt ikuistettua jälkipolville ja niissä tapahtuvat muutokset voitiin huomata. näin löytyi esim. kääpiöplaneetta Pluto, pieni liikkuva piste tähtimeren seassa. 
+Radiotähtitiede keksittiin, kun sotilaskäyttöön kehitetty radioantenni havaitsi Linnunradan keskuksesta tulevaa radiosäteilyä. Jo aiemmin oli ymmärretty, että näkyvä valo on vain yksi kapea siivu säteilystä, jota sähkö ja magnetismi aiheuttavat. 
+Radiotähtitiede avasi tietä uusille havaintomenetelmille kuten infrapunatähtitieteelle ja röntgentähtitieteelle. Nämä keksinnöt avasivat meille viimein ikkunan maailmankaikkeuteen, joka oli ollut meiltä aiemmin piilossa. Ymmärtämyksemme maailmankaikkeudesta on syventynyt merkittävästi näiden uusien havaintojen valossa.</p>
+<img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+<p>
+Tähtitiede on kuitenkin edelleen myös sitä, että menee ulos pimeän aikaan ja katsoo omin silmin taivaalle. Kuun vaiheet, kuun- ja auringonpimennykset, meteoriparvien aiheuttamat tähdenlennot ja useimmat planeetat näkyvät hyvin myös paljain silmin. Toisinaan taivaan halki saattaa kulkea komeetta upeine pyrstöineen, ja revontulia näkyy taivaalla Etelä-Suomessakin, kun Auringon magneettinen aktiivisuus on huipussaan. 
+Ammattitason tähtitiedettä voi edistää toisinaan myös harrastajavoimin. Jos omassa käytössä on kaukoputki, sen avulla voi tehdä sellaisia pitkäkestoisia tai nopeita havaintoja, joihin ammattilaislaitteet eivät ehdi. Tällä tavalla ovat suomalaisetkin tähtiharrastajat olleet mukana esimerkiksi gammapurkausten ja supernovien ammattitutkimuksessa. 
+</p>
 
-
-  <!-- Marketing messaging and featurettes
-  ================================================== -->
-  <!-- Wrap the rest of the page in another container to center all the content. -->
-
-  <div class="container marketing">
-
-    <!-- Three columns of text below the carousel -->
-    <div class="row">
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h2 class="fw-normal">Heading</h2>
-        <p>Some representative placeholder content for the three columns of text below the carousel. This is the first column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h2 class="fw-normal">Heading</h2>
-        <p>Another exciting bit of representative placeholder content. This time, we've moved on to the second column.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-      <div class="col-lg-4">
-        <svg class="bd-placeholder-img rounded-circle" width="140" height="140" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 140x140" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"/><text x="50%" y="50%" fill="#777" dy=".3em">140x140</text></svg>
-        <h2 class="fw-normal">Heading</h2>
-        <p>And lastly this, the third column of representative placeholder content.</p>
-        <p><a class="btn btn-secondary" href="#">View details &raquo;</a></p>
-      </div><!-- /.col-lg-4 -->
-    </div><!-- /.row -->
-
-
-    <!-- START THE FEATURETTES -->
-
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Galaksit. <span class="text-muted">It’ll blow your mind.</span></h2>
-        <p class="lead">Galaksit ovat valtavia kaasusta, pölystä, pimeästä aineesta ja tähdistä muodostuneita rakenteita, joita painovoima pitää kasassa. Maailmankaikkeudessa arvellaan olevan ainakin 170 miljardia galaksia. 
+<img src="/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">    
+    
+<h4 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Galaksit</span></h4>
+    <p>Galaksit ovat valtavia kaasusta, pölystä, pimeästä aineesta ja tähdistä muodostuneita rakenteita, joita painovoima pitää kasassa. Maailmankaikkeudessa arvellaan olevan ainakin 170 miljardia galaksia. 
 Ensimmäiset galaksit muodostuivat alle miljardin vuoden kuluttua alkuräjähdyksestä, kun universumin täyttäneessä kaasussa olevat pienet tihentymät alkoivat tiivistyä entisestään painovoiman vaikutuksesta.
 Galakseja on monen kokoisia ja näköisiä. Tutunnäköiset spiraaligalaksit muodostavat epäsäännöllisten galaksien kanssa yhteensä noin 60 prosenttia kaikista tunnetun avaruuden galakseista. 
 Spiraaligalaksit ovat litteän kiekkomaisia. Niitten spiraalihaaroissa syntyy runsaasti nuoria tähtiä. Spiraalihaarojen välissä on hiukan vanhempia tähtiä, ja galaksien keskusaluetta kiertää vanhoja tähtiä. Monien spiraaligalaksien keskusalue on sauvamaisen muotoinen, ja näitä galakseja kutsutaan sauvaspiraaligalakseiksi. Myös oman galaksimme Linnunradan on huomattu olevan sauvaspiraaligalaksi. Aurinkokunta sijaitsee Linnunradan kiekon tasossa, ja meitä ympäröivä kiekko näkyy pimeällä yötaivaalla sumumaisena vanana.
 Elliptiset galaksit muodostavat noin 10 - 15 prosenttia kaikista galakseista. Ne ovat joko täysin pallomaisia tai hiukan pitkulaisia tähtimuodostelmia, joiden tähdet ovat pääasiassa vanhoja. Elliptisissä galakseissa on hyvin vähän kaasua, josta uusia tähtiä voisi muodostua. Universumin kaikkein massiivisimmat galaksit ovat elliptisiä galakseja, ja ainakin osan niistä uskotaan syntyvän galaksien yhteentörmäyksissä. 
 Useimpien galaksien ytimessä uskotaan olevan supermassiivinen musta aukko. Galakseja ympäröi vaikeasti nähtävissä oleva pallomainen haloksi kutsuttu kehä, jossa on muutamia vanhoja tähtiä, pallomaisia tähtijoukkoja sekä runsaasti pimeää ainetta.
-.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-      </div>
+</p>
+<img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+<p>
+Tähtitiede on kuitenkin edelleen myös sitä, että menee ulos pimeän aikaan ja katsoo omin silmin taivaalle. Kuun vaiheet, kuun- ja auringonpimennykset, meteoriparvien aiheuttamat tähdenlennot ja useimmat planeetat näkyvät hyvin myös paljain silmin. Toisinaan taivaan halki saattaa kulkea komeetta upeine pyrstöineen, ja revontulia näkyy taivaalla Etelä-Suomessakin, kun Auringon magneettinen aktiivisuus on huipussaan. 
+Ammattitason tähtitiedettä voi edistää toisinaan myös harrastajavoimin. Jos omassa käytössä on kaukoputki, sen avulla voi tehdä sellaisia pitkäkestoisia tai nopeita havaintoja, joihin ammattilaislaitteet eivät ehdi. Tällä tavalla ovat suomalaisetkin tähtiharrastajat olleet mukana esimerkiksi gammapurkausten ja supernovien ammattitutkimuksessa. 
+</p>    
+
+<h4 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Tähtien synty ja kehitys</span></h4>
+    <p>Tähdet syntyvät, kun tähtienvälinen kaasu- ja pölypilvi luhistuu kasaan. Pilvi koostuu pääasiassa vedystä, joka on kaikkein kevyin alkuaine. Mukana on myös heliumia, pölyä (noin yksi prosentti) ja hiukan raskaampia alkuaineita. 
+Jos luhistuva pilvi on kovin pieni, tähtiä syntyy ehkä vain yksi, mutta toisinaan hyvin suuret pilvet alkavat luhistua ja tähtiä syntyy runsaasti. Usein puhutaankin tähtien syntyalueista. Valtaosa tähdistä löytyy systeemeistä, joissa toisiaan kiertää kaksi tai useampia tähtiä. 
+Kun pilvi luhistuu, sen ytimeen alkaa tiivistyä tähti (tai useampia tähtiä). Vaikuttaa siltä, että tähtien syntyessä niitten ympärille muodostuu pilven materiaalista hyvin yleisesti myös yksi tai useampia planeettoja. Tähdet ja planeetat siis syntyvät yhdessä. 
+Kun muodostumassa oleva tähti kerää lisää massaa emopilvestään, lämpötila sen ytimessä nousee. Jos tähti kerää tarpeeksi massaa (noin 18 prosenttia Auringon massasta), vety alkaa fuusioitua heliumiksi. Ellei massa riitä lämpötilan nostamiseen näin ylös, lopputuloksena on ns. ruskea kääpiö, joka säteilee hiljaksiin lämpöenergiaansa avaruuteen. 
+Kun vedyn fuusio on alkanut tähden ytimessä, tähteä aletaan kutsua pääsarjan tähdeksi. Kaikki tähdet massastaan riippumatta viettävät pääosan elinkaarestaan pääsarjassa muuttaen vetyä heliumiksi ja säteillen ulos fuusioprosesseissa muodostunutta energiaa. Mitä enemmän massaa tähdellä on, sitä kiivaammin se muuttaa vetynsä heliumiksi. Raskaimmissa tähdissä ytimen lämpötila on niin korkea, että myös helium ja sitä raskaammat alkuaineet fuusioituvat ja tuottavat energiaa. Vasta rauta on alkuaineena sellainen, että sen ydinten liittäminen yhteen kuluttaa energiaa enemmän kuin tuottaa sitä, joten raudan fuusiota ei enää tapahdu tähdissä. 
+</p>
+<img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+<p>
+Tähtitiede on kuitenkin edelleen myös sitä, että menee ulos pimeän aikaan ja katsoo omin silmin taivaalle. Kuun vaiheet, kuun- ja auringonpimennykset, meteoriparvien aiheuttamat tähdenlennot ja useimmat planeetat näkyvät hyvin myös paljain silmin. Toisinaan taivaan halki saattaa kulkea komeetta upeine pyrstöineen, ja revontulia näkyy taivaalla Etelä-Suomessakin, kun Auringon magneettinen aktiivisuus on huipussaan. 
+Ammattitason tähtitiedettä voi edistää toisinaan myös harrastajavoimin. Jos omassa käytössä on kaukoputki, sen avulla voi tehdä sellaisia pitkäkestoisia tai nopeita havaintoja, joihin ammattilaislaitteet eivät ehdi. Tällä tavalla ovat suomalaisetkin tähtiharrastajat olleet mukana esimerkiksi gammapurkausten ja supernovien ammattitutkimuksessa. 
+</p>
+    
+<h4 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">Aurinkokuntamme</span></h4>
+    <p>Aurinkokunta muodostui noin 4,57 miljardia vuotta sitten suuren tähtienvälisen kaasupilven luhistuessa. Pilveen syntyi monia tiivistymiskeskuksia, joihin syntyi tähtiä. Oma Aurinkomme oli yksi niistä. 
+Auringon ympärille muodostui pilven materiaalista kiekko, joka koostui pääasiassa vety- ja heliumkaasusta. Kiekon muodostumiseen meni noin 100 000 vuotta. Joukossa oli myös raskaampia alkuaineita kuten happea, hiiltä ja typpeä sekä erilaisista yhdisteistä muodostunutta pölyä, jota oli kaikesta aineesta noin yksi prosentti. Kun pölyhiukkaset törmäilivät toisiinsa kiekossa, alkoi muodostua suurempia kiinteitä kappaleita. Planeetat muodostuivat niistä miljoonien vuosien törmäilyn seurauksena. 
+Aurinkokunnassa on kahdentyyppisiä planeettoja: pieniä kiviplaneettoja sekä suuria kaasuplaneettoja. Kaasuplaneetat muodostuivat ensin. Kaasuplaneetat muodostuivat kiekossa ns. jäärajan takana. Siellä etäisyys Auringosta oli niin suuri, että kaasumaiset aineet alkoivat jäätyä ja ne oli helpompaa kaapata planeettojen rakennusaineeksi. Jouduttuaan planeetan pinnalle jäät kaasuuntuivat uudelleen ja muodostivat planeettojen paksut kaasukehät. 
+Kiviplaneetat ovat muodostuneet pääasiassa aurinkokunnan synnyttäneen pilven vähäisestä pölymäärästä. Ainoastaan Maalla ja Venuksella on merkittävän paksut kaasukehät. Kiviplaneetat muodostuivat sisemmässä aurinkokunnassa, jäärajan sisäpuolella. 
+Aurinko puolestaan imi itseensä jatkuvasti lisää materiaalia sitä ympäröivästä kiekosta. Lopulta, noin 50 miljoonan vuoden jälkeen, se oli riittävän massiivinen alkaakseen muuttaa vetyä heliumiksi ytimessään. Näin Auringosta tuli täysikasvuinen tähti. Jo tätä ennen se oli kuitenkin puhaltanut voimakkaiden tähtituulien avulla kiekon ympäriltään, jättäen vain planeetat jäljelle.
+</p>
+<img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+<p>
+Tähtitiede on kuitenkin edelleen myös sitä, että menee ulos pimeän aikaan ja katsoo omin silmin taivaalle. Kuun vaiheet, kuun- ja auringonpimennykset, meteoriparvien aiheuttamat tähdenlennot ja useimmat planeetat näkyvät hyvin myös paljain silmin. Toisinaan taivaan halki saattaa kulkea komeetta upeine pyrstöineen, ja revontulia näkyy taivaalla Etelä-Suomessakin, kun Auringon magneettinen aktiivisuus on huipussaan. 
+Ammattitason tähtitiedettä voi edistää toisinaan myös harrastajavoimin. Jos omassa käytössä on kaukoputki, sen avulla voi tehdä sellaisia pitkäkestoisia tai nopeita havaintoja, joihin ammattilaislaitteet eivät ehdi. Tällä tavalla ovat suomalaisetkin tähtiharrastajat olleet mukana esimerkiksi gammapurkausten ja supernovien ammattitutkimuksessa. 
+</p>
+    
+    
+    <p>In addition to our full espresso and brew bar menu, we serve fresh made-to-order breakfast and lunch sandwiches, as well as a selection of sides and salads and other good stuff.</p>
+    <div class="w3-panel w3-leftbar w3-light-grey">
+      <p><i>"Use products from nature for what it's worth - but never too early, nor too late." Fresh is the new sweet.</i></p>
+      <p>Chef, Coffeeist and Owner: Liam Brown</p>
+    </div>
+    <img src="/w3images/coffeeshop.jpg" style="width:100%;max-width:1000px" class="w3-margin-top">
+    <p><strong>Opening hours:</strong> everyday from 6am to 5pm.</p>
+    <p><strong>Address:</strong> 15 Adr street, 5015, NY</p>
+  </div>
+</div>
+
+<!-- Menu Container -->
+<div class="w3-container" id="menu">
+  <div class="w3-content" style="max-width:700px">
+ 
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">THE MENU</span></h5>
+  
+    <div class="w3-row w3-center w3-card w3-padding">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+        <div class="w3-col s6 tablink">Eat</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+        <div class="w3-col s6 tablink">Drink</div>
+      </a>
     </div>
 
-    <hr class="featurette-divider">
-
-    <div class="row featurette">
-      <div class="col-md-7 order-md-2">
-        <h2 class="featurette-heading fw-normal lh-1">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-        <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-      </div>
-      <div class="col-md-5 order-md-1">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-      </div>
+    <div id="Eat" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Bread Basket</h5>
+      <p class="w3-text-grey">Assortment of fresh baked fruit breads and muffins 5.50</p><br>
+    
+      <h5>Honey Almond Granola with Fruits</h5>
+      <p class="w3-text-grey">Natural cereal of honey toasted oats, raisins, almonds and dates 7.00</p><br>
+    
+      <h5>Belgian Waffle</h5>
+      <p class="w3-text-grey">Vanilla flavored batter with malted flour 7.50</p><br>
+    
+      <h5>Scrambled eggs</h5>
+      <p class="w3-text-grey">Scrambled eggs, roasted red pepper and garlic, with green onions 7.50</p><br>
+    
+      <h5>Blueberry Pancakes</h5>
+      <p class="w3-text-grey">With syrup, butter and lots of berries 8.50</p>
     </div>
 
-    <hr class="featurette-divider">
+    <div id="Drinks" class="w3-container menu w3-padding-48 w3-card">
+      <h5>Coffee</h5>
+      <p class="w3-text-grey">Regular coffee 2.50</p><br>
+    
+      <h5>Chocolato</h5>
+      <p class="w3-text-grey">Chocolate espresso with milk 4.50</p><br>
+    
+      <h5>Corretto</h5>
+      <p class="w3-text-grey">Whiskey and coffee 5.00</p><br>
+    
+      <h5>Iced tea</h5>
+      <p class="w3-text-grey">Hot tea, except not hot 3.00</p><br>
+    
+      <h5>Soda</h5>
+      <p class="w3-text-grey">Coke, Sprite, Fanta, etc. 2.50</p>
+    </div>  
+    <img src="/w3images/coffeehouse2.jpg" style="width:100%;max-width:1000px;margin-top:32px;">
+  </div>
+</div>
 
-    <div class="row featurette">
-      <div class="col-md-7">
-        <h2 class="featurette-heading fw-normal lh-1">Ja tähän vielä jotakin. <span class="text-muted">Checkmate.</span></h2>
-        <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
-      </div>
-      <div class="col-md-5">
-        <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
-      </div>
-    </div>
+<!-- Contact/Area Container -->
+<div class="w3-container" id="where" style="padding-bottom:32px;">
+  <div class="w3-content" style="max-width:700px">
+    <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">WHERE TO FIND US</span></h5>
+    <p>Find us at some address at some place.</p>
+    <img src="/w3images/map.jpg" class="w3-image" style="width:100%">
+    <p><span class="w3-tag">FYI!</span> We offer full-service catering for any event, large or small. We understand your needs and we will cater the food to satisfy the biggerst criteria of them all, both look and taste.</p>
+    <p><strong>Reserve</strong> a table, ask for today's special or just send us a message:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="number" placeholder="How many people" required name="People"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="datetime-local" placeholder="Date and time" required name="date" value="2020-11-16T20:00"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Message \ Special requirements" required name="Message"></p>
+      <p><button class="w3-button w3-black" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
 
-    <hr class="featurette-divider">
+<!-- End page content -->
+</div>
 
-    <!-- /END THE FEATURETTES -->
+<!-- Footer -->
+<footer class="w3-center w3-light-grey w3-padding-48 w3-large">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
 
-  </div><!-- /.container -->
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
 
-
-  <!-- FOOTER -->
-  <footer class="container">
-    <p class="float-end"><a href="#">Back to top</a></p>
-    <p>&copy; 2017–2022 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
-  </footer>
-</main>
-
-
-    <script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
-
-      
-  </body>
+</body>
 </html>
